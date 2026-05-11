@@ -5,10 +5,8 @@ const port = process.env.PORT || 5000
 const app = express();
 
 //Middleware qui permet de traiter les données de ma Request
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
 
 app.use("/todos", require("./routes/todo"));
 
