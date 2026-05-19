@@ -1,17 +1,19 @@
+require('dotenv').config();
 const mysql = require('mysql2')
+
 const connection = mysql.createConnection({
-	host: '172.30.48.1',
-	user: 'root',
-	password: 'todolist',
-	database: 'todolist'
-})
+	host: process.env.DB_HOST,
+	user: process.env.DB_USER,
+	password: process.env.DB_PASSWORD,
+	database: process.env.DB_DATABASE,
+});
 
 connection.connect((err) => {
 	if (err){
 		console.error("Erreur de connexio : "+err.stack)
 		return;
 	}
-	console.log("Connexion réussie à la bdd !")
+	console.log("Connexion réussie à la bdd !");
 });
 
 module.exports = connection;
