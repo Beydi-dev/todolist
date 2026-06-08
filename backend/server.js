@@ -9,6 +9,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/todos", require("./routes/todo"));
+app.use("/auth", require ("./routes/auth"));
+
 
 app.get("/", (req, res) => {
 	res.send("Hello World !")
