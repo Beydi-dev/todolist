@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo App</title>
+</head>
+<body>
+	<form id="registrationForm">
+		<label for="pseudo">Pseudo :</label>
+		<input type="text" id="pseudo" name="pseudo" maxlength="20"><br>
+		<label for="register-email">Adresse Mail :</label>
+		<input type="email" id="register-email" name="email" maxlength="20"><br>
+		<label for="register-password">Mot de passe :</label>
+		<input type="password" id="register-password" name="password" maxlength="20"><br>
+		<input type="submit" value="S'inscrire">
+		<p>
+			Déjà un compte ?
+			<a id="loginForm" onclick="ShowLoginForm()">Se connecter</a>
+		</p>
+	</form>
+
+	<form id="loginForm">
+		<label for="email">Adresse Mail :</label>
+		<input type="email" id="login-email" name="email" maxlength="20"><br>
+		<label for="password">Mot de passe :</label>
+		<input type="password" id="login-password" name="login-password" maxlength="20"><br>
+		<input type="submit" value="Se connecter">
+		<p>
+			Vous n'avez pas de compte ?
+			<a id="#" onclick="ShowLoginForm()">S'inscrire</a>
+		</p>
+	</form>
+	<script src="js/auth.js"></script>
+</body>
+</html>
