@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="create-form">
+            <input type="text" id="title-input" placeholder="Titre">
+            <input type="text" id="description-input" placeholder="description...">
+            <button onclick="createTodo()">Créer</button>
+        </div>
+
+        <div id="filters">
+			<div>
+				<button onclick="filterTodos('todo')">TO DO</button>
+        		<button onclick="filterTodos('done')">Effectués</button>
+        	</div>
+			<button onclick="logout()">Se déconnecter</button>
+		</div>
+		
+		<div id="todos-list"></div>
+	</div>
+	
+	<script src="js/todos.js"></script>
+</body>
+</html>

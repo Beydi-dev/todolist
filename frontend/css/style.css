@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2b2b2b;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+}
+
+/* TODOS PAGE */
+#create-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#create-form input {
+    padding: 10px;
+    border: 1px solid #555;
+    background: #1e1e1e;
+    color: white;
+    border-radius: 4px;
+    flex: 1;
+}
+
+#create-form button {
+    padding: 10px 20px;
+    background: #3a6df0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#filters button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #3a6df0;
+    color: white;
+}
+
+form {
+    gap: 20px;
+}
+
+form label {
+    margin-bottom: -10px;
+}
+
+form input {
+	width: 100%;
+	padding: 12px;
+}
+
+form input[type="submit"] {
+    margin-top: 60px;
+}

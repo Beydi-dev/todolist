@@ -12,7 +12,7 @@ async function register(req, res) {
 
 	db.query('SELECT * FROM utilisateur WHERE email = ?', [email], async (err, results) => {
 		if (err)
-			return res.status(500).json({ message: 'Database error1' });
+			return res.status(500).json({ message: err.message });
 		
 		if (results.length > 0)
 			return res.status(400).json({message: 'Email déjà enregistré' });
@@ -52,7 +52,7 @@ async function login(req, res) {
 			return res.status(401).json({ message: 'Mot de passe incorrect'});
 
 		const token = jwt.sign(
-			{ id: user.public_id , email: user.email },
+			{ id: user.id_utilisateur , email: user.email },
 			process.env.SECRET_KEY,
 			{ expiresIn: '1h' }
 		);

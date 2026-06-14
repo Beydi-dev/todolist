@@ -5,7 +5,7 @@ const todoController = require('../controllers/todo.controller');
 const verifyToken = require('../middlewares/auth.middleware');
 
 // Créer un todo
-router.post('/', todoController.addTodo);
+router.post('/', verifyToken, todoController.addTodo);
 
 // tous les todos
 router.get('/', verifyToken, todoController.getAllTodos);
