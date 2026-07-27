@@ -79,7 +79,8 @@ async function deleteTodo(id) {
 // Modifier un todo
 async function editTodo(id) {
     const newTitle = prompt('Nouveau titre :');
-    if (!newTitle) return;
+	const newDescription = prompt('Nouveau contenu :')
+    if (!newTitle || !newDescription) return;
 
     await fetch(`${API}/todos/${id}`, {
         method: 'PATCH',
@@ -87,7 +88,7 @@ async function editTodo(id) {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${getToken()}`
         },
-        body: JSON.stringify({ titre: newTitle })
+        body: JSON.stringify({ titre: newTitle, description: newDescription })
     });
     loadTodos();
 }
